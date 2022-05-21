@@ -21,7 +21,7 @@ class Solution
                s.pop();
            
           if(s.size()==0)
-               V.push_back(i+1);
+              V.push_back(i+1);
            
           else{
               V.push_back(i-s.top());
