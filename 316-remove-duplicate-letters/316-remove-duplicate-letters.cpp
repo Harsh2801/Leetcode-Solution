@@ -32,6 +32,7 @@ public:
             ans.push_back(st.top());
             st.pop();
         }
+        // revrse all becoz stack is LIFO
         reverse(ans.begin(),ans.end());
         return ans;
     }
