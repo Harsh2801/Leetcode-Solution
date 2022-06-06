@@ -1,5 +1,5 @@
 # Josephus problem
-## Easy 
+##  Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given the total number of persons <strong>n</strong> and a number <strong>k</strong> which indicates that<strong> k-1 </strong>persons are skipped and <strong>k<sup>th</sup></strong> person is killed in circle in a fixed direction.</span></p>
 
