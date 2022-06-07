@@ -91,7 +91,7 @@ return 1+len(head->next);
 int intersectPoint(Node* head1, Node* head2)
 {
     // Your Code Here
-    int lenA = len(head1);
+        int lenA = len(head1);
     int lenB = len(head2);
     int diff = abs(lenA-lenB);
     Node *temp1=head1;
@@ -112,12 +112,16 @@ int intersectPoint(Node* head1, Node* head2)
             
         }   
     }
-    while(temp1!=temp2)
+    while(temp1&&temp2)
     {
+        if(temp1==temp2)
+        {
+            return temp1->data;
+        }
         temp1=temp1->next;
         temp2=temp2->next;
     }
-    return temp1->data;
+    
     
 }
 
