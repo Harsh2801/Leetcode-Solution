@@ -99,10 +99,8 @@ and a pointer to right child */
 bool helper(Node* a, Node* b)
 {
     if(a==NULL && b==NULL) return true;
-    if(a==NULL && b!=NULL) return false;
-    if(a!=NULL && b==NULL){
-       return false;
-   }
+    if(a==NULL || b==NULL) return false;
+   
     bool op1 = helper(a->left, b->right);
     bool op2 = helper(a->right, b->left);
     
