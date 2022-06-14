@@ -127,9 +127,9 @@ struct Node
  */
 
 //Function to return a list containing elements of left view of the binary tree.
-int maxlvl = -1;
 
-void lot(Node*root,int lvl,vector<int> &ans){
+int maxlvl=-1;
+void left(Node*root,int lvl,vector<int> &ans){
 
     if(!root) return;
 
@@ -141,9 +141,9 @@ void lot(Node*root,int lvl,vector<int> &ans){
 
     }
 
-    lot(root->left,lvl+1,ans);
+    left(root->left,lvl+1,ans);
 
-    lot(root->right,lvl+1,ans);
+    left(root->right,lvl+1,ans);
 
 } 
 
@@ -151,12 +151,10 @@ void lot(Node*root,int lvl,vector<int> &ans){
 
 vector<int> leftView(Node *root)
 
-{
-  maxlvl=-1;
+{ 
+   maxlvl=-1;
    vector<int> ans;
-
-   lot(root,0,ans);
-
+   left(root,0,ans);
    return ans;
 
 }
