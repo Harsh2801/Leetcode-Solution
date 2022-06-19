@@ -113,9 +113,11 @@ class Solution {
         {
             pair<Node*,int> p = q.front();
             q.pop();
-            m[p.second] = p.first->data;
+            
             minm = min(minm,p.second);
             maxx = max(maxx,p.second);
+            
+            m[p.second] = p.first->data;
             // if(m.find(p.second)==m.end())
             // {
             //     m[p.second]=p.first->data;
