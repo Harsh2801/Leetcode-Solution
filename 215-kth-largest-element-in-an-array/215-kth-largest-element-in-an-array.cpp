@@ -5,25 +5,25 @@ public:
     //     int s=nums.size()-k;
     //     return nums[s];
     // }
-int findKthLargest(vector<int>& nums, int k) 
-    {
-        // Take a max heap
-        priority_queue<int> q;
-        // Insert element
-        // Element would be inserted in a manner that lagest element is at the top
-        for(int i=0;i<nums.size();i++)
-        {
-            q.push(nums[i]);
-        }
-        // Take out the element k-1 times and kth element will be the required element
-        for(int i=0;i<k-1;i++)
-        {
-            q.pop();
-        }
-        //return that element
-        return q.top();
-    }
-};
+// int findKthLargest(vector<int>& nums, int k) 
+//     {
+//         // Take a max heap
+//         priority_queue<int> q;
+//         // Insert element
+//         // Element would be inserted in a manner that lagest element is at the top
+//         for(int i=0;i<nums.size();i++)
+//         {
+//             q.push(nums[i]);
+//         }
+//         // Take out the element k-1 times and kth element will be the required element
+//         for(int i=0;i<k-1;i++)
+//         {
+//             q.pop();
+//         }
+//         //return that element
+//         return q.top();
+//     }
+// };
     
 //     int fun(int x,vector<int>& nums,int n){
 //         int count = 0;
@@ -60,3 +60,13 @@ int findKthLargest(vector<int>& nums, int k)
 //         return ans;
 //     }
 // };
+    
+    int findKthLargest(vector<int>& nums, int k) {
+	priority_queue<int,vector<int>,greater<int>> pq;
+	for(int i=0;i<nums.size();++i){
+		pq.push(nums[i]);
+		if(pq.size()>k) pq.pop();
+	}
+	return pq.top();            
+}
+};
