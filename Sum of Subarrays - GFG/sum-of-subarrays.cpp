@@ -14,7 +14,7 @@ public:
          long int result = 0,temp=0;
  long p=1000000007, sum=0;
         for(int i=0;i<n;i++)
-           sum= (sum + a[i]*(n-i)*(i+1))%p;
+           sum+=(a[i]*(n-i)*(i+1))%p;
         return sum%p;
     }
 };
