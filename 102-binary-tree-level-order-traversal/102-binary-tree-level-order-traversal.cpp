@@ -46,15 +46,15 @@ public:
         q.push(root);
         while(!q.empty())
         {
-            vector<int> level;
-            int size=q.size();
+          vector<int> level;
+            int size = q.size();
             for(int i=0; i<size; i++)
             {
-                TreeNode* n = q.front();
+                TreeNode* node = q.front();
                 q.pop();
-                if(n->left)q.push(n->left);
-                if(n->right)q.push(n->right);
-                level.push_back(n->val);
+                if(node->left)q.push(node->left);
+                if(node->right) q.push(node->right);
+                level.push_back(node->val);
             }
             ans.push_back(level);
         }
