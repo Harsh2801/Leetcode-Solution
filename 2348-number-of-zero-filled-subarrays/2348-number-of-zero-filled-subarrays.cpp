@@ -11,6 +11,7 @@ public:
             {
                 cnt++;
                 ans += cnt;
+             
             }
             
             // if it is none 0 them make 0 count 0
